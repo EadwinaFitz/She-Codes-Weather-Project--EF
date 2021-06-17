@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/a9e2270495.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="weatherproject.css" />
+    <title>Weather Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="current-city">
+        <h1 id="selectedCity">Melbourne</h1>
+      </div>
+      <br />
+      <ul>
+        <li id="currentDate">current date</li>
+        <li id="currentTime">current time</li>
+      </ul>
+
+      <br />
+      <div class="current-temp">
+        <h3 class="temperature" id="temperature">18</h3>
+        <span class="units">
+          <span class="tempUnit fontBold" id="celcius-link">℃</span>
+        </span>
+      </div>
+
+      <h5 class="weather-descriptions">
+        <span class="weather-details"></span><br />
+        <span class="humidity"></span><br />
+        <span class="wind-speed"></span><br />
+      </h5>
+
+      <img src="amcharts_weather_icons_1.0.0/animated/rainy-1.svg" />
+
+      <div class="forecast">
+        <div class="row align-items-start">
+          <div class="col">
+            <h4>
+              <i class="fas fa-cloud-sun-rain weather-icon"></i> <br />
+              Fri
+            </h4>
+            <p>15°</p>
+          </div>
+          <div class="col">
+            <h4>
+              <i class="fas fa-cloud weather-icon"></i> <br />
+              Sat
+            </h4>
+            <p>17°</p>
+          </div>
+          <div class="col">
+            <h4>
+              <i class="fas fa-sun weather-icon"></i>
+              <br />
+              Sun
+            </h4>
+            <p>25°</p>
+          </div>
+          <div class="col">
+            <h4>
+              <i class="fas fa-wind weather-icon"></i><br />
+              Mon
+            </h4>
+            <p>17°</p>
+          </div>
+          <div class="col">
+            <h4>
+              <i class="fas fa-sun weather-icon"></i> <br />
+              Tues
+            </h4>
+            <p>22°</p>
+          </div>
+        </div>
+      </div>
+
+      <form id="citySearch">
+        <div class="search-bar">
+          <input
+            type="search"
+            class="form-control city-search"
+            id="searchcity"
+            placeholder="Search city"
+          />
+          <input
+            type="submit"
+            value="search"
+            class="btn btn-primary city-search-submit"
+          />
+
+          <button class="btn btn-primary" id="current-location-button">
+            current location
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="weatherproject.js"></script>
+  </body>
+</html>

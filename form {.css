@@ -1,0 +1,59 @@
+form {
+  display: block;
+  max-width: 100%;
+  margin: 40px;
+}
+input [type="search"] {
+  border: solid 3px #fff;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 0 auto;
+  transition: all 2s ease-in;
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+let weather = {
+  paris: {
+    temp: 19.7,
+    humidity: 80,
+  },
+  tokyo: {
+    temp: 17.3,
+    humidity: 50,
+  },
+  lisbon: {
+    temp: 30.2,
+    humidity: 20,
+  },
+  "san francisco": {
+    temp: 20.9,
+    humidity: 100,
+  },
+  moscow: {
+    temp: -5,
+    humidity: 20,
+  },
+};
+
+let city = prompt("Enter your city");
+let lowercaseCity = city.toLowerCase();
+let cityWeather = weather[lowercaseCity];
+
+if (!cityWeather) {
+  alert(
+    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
+  );
+} else {
+  alert(
+    `It is currently ${cityWeather.temp}°C in ${city} with a humidity of ${cityWeather.humidity}%!`
+  );
+}

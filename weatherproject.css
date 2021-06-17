@@ -1,0 +1,128 @@
+html {
+  background: #fff;
+}
+
+body {
+  margin: 20px;
+  padding: 50px;
+  border: 1px solid rgb(228, 178, 187);
+  border-radius: 10px;
+  max-width: 100%;
+  background: linear-gradient(
+    179.9deg,
+    rgb(208, 246, 255) 0.1%,
+    rgb(255, 237, 237) 47.9%,
+    rgb(255, 255, 231) 100.2%
+  );
+}
+
+h1 {
+  font-size: 75px;
+}
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  display: inline-block;
+  line-height: 170px;
+  text-align: center;
+  font-size: 200px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgb(82, 51, 51);
+}
+
+h4,
+h5,
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgb(82, 51, 51);
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  min-width: 50%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgb(82, 51, 51);
+}
+
+.current-city {
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgb(82, 51, 51);
+}
+
+.search-bar {
+  text-align: center;
+}
+
+.city-search {
+  margin: 40px auto 0;
+  display: inline-block;
+  border: 1px solid rgb(255, 172, 187);
+  border-radius: 10px;
+  width: 35%;
+  min-width: 140px;
+  font-size: 12px;
+  font-weight: lighter;
+  line-height: 30px;
+}
+
+.city-search-submit {
+  display: inline-block;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 172, 187);
+  background-color: rgb(255, 172, 187);
+  min-width: 50px;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+#current-location-button {
+  display: inline-block;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 172, 187);
+  background-color: rgb(255, 172, 187);
+  min-width: 50px;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.weather-icon {
+  margin: 5px;
+  font-size: 22px;
+}
+
+.current-temp {
+  text-align: center;
+  margin: 50px 0 20px 0;
+}
+.units {
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgb(82, 51, 51);
+}
+
+.tempUnit {
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+.fontBold {
+  font-weight: bolder;
+}
