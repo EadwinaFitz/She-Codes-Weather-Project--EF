@@ -100,3 +100,13 @@ let locationButton = document.querySelector("#current-location-button");
 locationButton.addEventListener("click", currentLocationButton);
 
 currentLocationButton();
+
+function displayFarenheit(event) {
+  event.preventDefault();
+  let farenheitTemp = (18 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = math.round(farenheitTemp);
+}
+
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", displayFarenheit);
