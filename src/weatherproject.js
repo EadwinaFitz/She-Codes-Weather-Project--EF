@@ -55,6 +55,7 @@ setInterval(renderDateAndTime, 500);
 renderDateAndTime();
 
 let apiKey = "70054ee566e648ee9a4d709e73498eea";
+let currentCity = "Melbourne";
 
 function displayDetails(response) {
   let currentTemp = document.querySelector("#temperature");
@@ -62,7 +63,8 @@ function displayDetails(response) {
   currentTemp.innerHTML = temperature;
 
   let displayCity = document.querySelector("#selectedCity");
-  displayCity.innerHTML = response.data.name;
+  currentCity = response.data.name;
+  displayCity.innerHTML = currentCity;
 
   let weatherDescription = document.querySelector(".weather-details");
   weatherDescription.innerHTML = response.data.weather[0].main;
@@ -100,12 +102,27 @@ let locationButton = document.querySelector("#current-location-button");
 locationButton.addEventListener("click", currentLocationButton);
 
 function displayFarenheit(event) {
-  let farenheitTemp = document.querySelector("#temperature");
-  let farenheitConversion = Math.round(response.data.main.temp);
-  currentTemp.innerHTML = temperature;
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=imperial&appid=${apiKey}`;
+  axios(apiURL).then(displayDetails);
+  farenheitLink.classList.add("fontBold");
+  celciusLink.classList.remove("fontBold");
 }
 
 let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", displayFarenheit);
 
+function displayCelcius(event) {
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=metric&appid=${apiKey}`;
+  axios(apiURL).then(displayDetails);
+  farenheitLink.classList.remove("fontBold");
+  celciusLink.classList.add("fontBold");
+}
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", displayCelcius);
+
 currentLocationButton();
+
+// function convertTemptoFarenheit(); {
+// let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&appid=${apiKey}`
+//
