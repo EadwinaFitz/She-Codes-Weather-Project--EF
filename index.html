@@ -21,7 +21,7 @@
   <body>
     <div class="container">
       <div class="current-city">
-        <h1 id="selectedCity">Melbourne</h1>
+        <h1 id="selectedCity"></h1>
       </div>
 
       <ul>
@@ -29,20 +29,24 @@
         <li id="currentTime">current time</li>
       </ul>
 
-      <br />
       <div class="current-temp">
-        <h3 class="temperature" id="temperature">18</h3>
+        <h3 class="temperature" id="temperature"></h3>
         <span class="units">
           <span class="tempUnit fontBold" id="celcius-link">℃</span> |
           <span class="tempUnit" id="farenheit-link">°F</span>
         </span>
       </div>
+      <img
+        src="https://openweathermap.org/img/wn/01d@2x.png"
+        id="weather-icon"
+      />
 
       <h5 class="weather-descriptions">
         <span class="weather-details"></span><br />
         <span class="humidity"></span><br />
         <span class="wind-speed"></span><br />
       </h5>
+
       <br />
       <div class="forecast">
         <div class="row align-items-start">
