@@ -33,10 +33,9 @@ h3 {
 }
 
 h4,
-h5,
-p {
+h5 {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
   text-shadow: 1px 1px 2px rgb(82, 51, 51);
 }
@@ -63,6 +62,16 @@ a {
   font-size: 12px;
   color: #fff;
   text-shadow: 1px 1px 2px rgb(82, 51, 51);
+}
+
+.col {
+  flex: 0 auto;
+  width: 18%;
+  border: 1px solid rgba(255, 172, 187, 0.1);
+  border-radius: 10px;
+  background-color: rgba(255, 172, 187, 0.1);
+  margin: 10px;
+  padding: 5px;
 }
 
 .current-city {
@@ -133,4 +142,12 @@ a {
 
 .fontBold {
   font-weight: bolder;
+}
+
+.forecast-temp-max {
+  font-weight: bolder;
+}
+
+.forecast-temp-min {
+  font-weight: normal;
 }
